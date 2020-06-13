@@ -15,3 +15,12 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+- task: CopyFiles@2
+  inputs:
+    #sourceFolder: # Optional
+    contents: '**' 
+    targetFolder: /var/www/html
+    #cleanTargetFolder: false # Optional
+    #overWrite: false # Optional
+    #flattenFolders: false # Optional
+    #preserveTimestamp: false # Optional
